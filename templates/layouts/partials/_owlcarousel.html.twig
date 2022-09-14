@@ -1,0 +1,14 @@
+<div id="owl-demo" class="owl-carousel owl-theme container px-lg-0">
+	{% for id in 8..3 %}
+
+		<div class="item position-relative">
+			<a href="{{ path('app_show',{'id': id})}}">
+				<img src='{{ asset("build/img/blog/blog#{id}.png") }}' class="w-100 im-fluid">
+				<p class="h3 text-white article-owl">Article n°
+					{{id}}</p>
+			</a>
+		</div>
+	{% endfor %}
+</div>
+
+<div class="py-4"></div>

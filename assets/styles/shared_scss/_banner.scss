@@ -1,0 +1,29 @@
+
+.bann_wall{
+    position: relative;
+    height: 500px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.banner_title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+.banner_title .div_banner{
+
+    background-color: rgba(0,0,0,.4);
+}
+
+.banner_title div p {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.indicator{font-size: 13px;}

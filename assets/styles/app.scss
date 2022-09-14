@@ -1,0 +1,220 @@
+@import "~bootstrap/scss/bootstrap";
+@import "shared_scss/_variables";
+@import "shared_scss/_pagination";
+@import "shared_scss/_navbar";
+@import "shared_scss/_footer";
+@import "shared_scss/_banner";
+
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $body-font;
+    background-color: #dcdcdc;
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-attachment: fixed;
+    // background-size: cover;
+}
+
+h1,h2,h3,h4,h5,h6{
+    position: relative;
+    width: max-content;
+    font-family: "Lora",serif;
+    font-weight: bolder;
+}
+
+P{font-size: 20px;}
+
+
+// *Background,text color,title underline,italic
+
+.text-orange{color: $orange;}
+
+.text-grey{color: $grey;}
+
+.bg-orange {background-color: $orange;}
+
+.bg-orange:hover {color: $orange !important;}
+
+.border-orange{border-left: 5px solid $orange !important;}
+
+.border-top-orange{border-top: 1px solid $orange !important;}
+
+.a_italic:hover {font-style: italic !important;}
+
+.card_body{background-color: $card_body;}
+
+.title_after::after{
+
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 45%;
+    height: 5px;
+    background-color: $orange;
+    z-index: .5;
+}
+
+
+// *Sidebar
+
+.sticky-top{top: 100px !important;}
+
+.title-sidebar:hover {color: $orange !important;}
+
+.author_side {font-family: $author-font;}
+
+.mois:hover {
+
+    text-decoration: underline !important;
+    font-style: italic;
+    color: $orange !important;
+}
+
+.social_sidebar:hover{color: $orange !important;}
+
+.post_side:hover .title-sidebar{ color: $orange !important;}
+
+
+
+// *Newsletter
+#name_news,
+#email_news,
+.submit_edit,
+.submit_btn {height: 45px !important;}
+
+#suscribe_news:hover{color: #fff !important;}
+
+
+// *Owlcarousel
+
+.article-owl{
+
+    position: absolute;
+    bottom: 6%;
+    left: 6%;
+    z-index: 120;
+}
+
+.owl-dots .owl-dot span{
+    background: #959595bb !important;
+    border-radius: 0 !important;
+}
+
+.owl-dots .owl-dot.active span{background: $orange !important;}
+
+
+// *Home Page 
+
+
+// *Article Show Page
+
+.show_content{
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.div_cut{
+    width: 60px;
+    height: 5px;
+    background: $orange;
+    margin: 15px 0;
+    box-shadow: 0px 0p  x 4px 2px rgba(204,204,204,1);
+}
+
+
+// *Form contact et input
+input{height: 45px;}
+
+.btn-grey{
+    background-color: $btn-grey;
+    color: $orange;
+    border: 1px solid $btn-grey;
+}
+
+.btn-grey:hover{
+    background-color: $orange;
+    color: $btn-grey;
+    border: 1px solid $orange;
+}
+
+// *About Page
+
+.img-auth{border-top-right-radius: 35px;}
+
+.profile {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-top-right-radius: 35px !important;
+    border-radius: 6px
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
+    border-radius: 12px;
+    border-top-right-radius: 35px !important;
+    border-radius: 6px
+}
+
+.profile:hover .overlay {opacity: 1}
+
+.social-icons {
+    display: flex;
+    list-style: none;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    left: 22px
+}
+
+.social-icons li {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 1s
+}
+
+.social-icons li:hover {
+    background: #fff;
+    color: #000
+}
+
+.overlay .about {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 40%;
+    color: #fff;
+    flex: column
+}
+
+.social_about:hover{color: $orange !important;}
+
+
+
+

@@ -1,0 +1,123 @@
+<div class="col-lg-4 ps-lg-5 {{ _route == 'app_contact' or _route == 'app_about' ? 'd-none' : ''  }}">
+	<div class="w-100 sticky-top">
+
+		<h2 class="mb-5 title_after">A propos de moi</h2>
+		<div class="mb-4 rounded">
+			<div class="d-flex justify-content-center align-items-center mb-3">
+				<img src="{{ asset('build/img/sidebar/author.jpg') }}" class="rounded-circle" width="100">
+			</div>
+			<p class="text-center w-100 fs-3 author_side mb-3">Shopia Bella</p>
+			<p>
+				Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.
+			</p>
+			<div class="d-flex justify-content-center mt-4">
+				<div>
+					<a class="text-decoration-none text-dark social_sidebar" href="#">
+						<i class="fa-brands fa-github fs-5"></i>
+					</a>
+				</div>
+				<div>
+					<a class="text-decoration-none text-dark social_sidebar mx-3" href="#">
+						<i class="fa-brands fa-twitter fs-5"></i>
+					</a>
+				</div>
+				<div>
+					<a class="text-decoration-none text-dark social_sidebar" href="#">
+						<i class="fa-brands fa-square-facebook fs-5"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		{# ---- #}
+		<div class="mt-5">
+			<h2 class="mb-5 title_after">Articles récents</h2>
+			{% for id in 8..6 %}
+				<div class="d-flex mb-3 post_side">
+					<div>
+						<a class="text-decoration-none" href="{{ path('app_show',{'id':id}) }}">
+							<img src="{{ asset("build/img/blog/blog#{id}.png") }}" class="img-fluid" width="110">
+						</a>
+					</div>
+					<div class="ps-3">
+						<a class="text-decoration-none text-body title-sidebar" href="{{ path('app_show',{'id':id}) }}">
+							<p class="h5">Article n°
+								{{id}}</p>
+						</a>
+						<p class="lead fs-6 text-muted">
+							<i class="fa-solid fa-calendar-days text-orange me-2"></i>20/05/2022</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		{# ------------ #}
+
+		<div class="mt-5">
+			<h2 class="mb-5 title_after">Archives</h2>
+			<ol class="list-unstyled">
+				<li class="pb-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						March 2021
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						February 2021
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						January 2021
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						December 2020
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						November 2020
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						October 2020
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						September 2020
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						August 2020
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						July 2020
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						June 2020
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						May 2020
+					</a>
+				</li>
+				<li class="py-1">
+					<a class="mois text-body text-decoration-none fs-5" href="#">
+						April 2020
+					</a>
+				</li>
+			</ol>
+		</div>
+
+	</div>
+</div>

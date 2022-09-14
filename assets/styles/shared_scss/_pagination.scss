@@ -1,0 +1,23 @@
+
+
+.pagination{margin-right: auto !important;}
+
+.pagination .page-item.active .page-link {
+
+    background-color: $orange !important;
+    border-color: $orange !important;
+    
+}
+
+.pagination .page-item.disabled .page-link {color: #aaa !important;}
+
+.pagination .page-item.active .page-link {color: #fff !important;}
+
+.page-link {color: #20232e !important;}
+
+.page-link:hover{color: $orange !important;}
+
+/* FORMULAIRE CREATION/EDITION */
+.edit_form input {height: 45px;}
+
+#article_image_help {font-style: italic !important;}

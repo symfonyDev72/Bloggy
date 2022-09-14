@@ -1,0 +1,61 @@
+
+// .sticky_nav{
+
+//     position: sticky;
+//     top: -60px;
+//     left: 0;
+//     right: 0;
+//     transform: translateY(60px);
+//     background-color: rgba(218, 218, 218, 0.867) !important;
+//     box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+//     transition: transform .6s ease-in-out,background 500ms ease;
+//     z-index: 10 !important;
+// }
+
+.sticky_nav{
+
+    position: sticky;
+    top: -60px;
+    left: 0;
+    right: 0;
+    transform: translateY(60px);
+    background-color: #151515 !important;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    transition: transform .6s ease-in-out,background 500ms ease;
+    z-index: 1500 !important;
+}
+
+.links_color{
+
+    color: rgb(234, 223, 223) !important;
+}
+
+// *Custom color & background
+.actif {color: $orange !important;}
+
+.my_nav{background-color: transparent;}
+
+.my_nav .nav-link{color: #131313;}
+
+.my_nav .nav-link:hover{color: $orange !important;}
+
+.user_connect:hover{color: $orange !important;}
+
+.navbar-brand{
+    font-family: $brand-font;
+    font-size: 85px;
+}
+
+.my_nav .nav-link,.user_connect,.i_connect{
+    color: $grey;
+    font-size: 19px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.modal{z-index: 1600;}
+
+.a_modal:hover{font-style: italic !important;}
+
+//change color and background
+

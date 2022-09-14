@@ -1,0 +1,129 @@
+<div class="w-100 d-flex justify-content-center align-items-center pt-3">
+	<a class="navbar-brand fw-bolder py-2" href="{{ path('app_home') }}">Bloggy</a>
+</div>
+
+<header class="my_header">
+	<nav class="navbar my_nav navbar-expand-lg navbar-light py-3">
+		<div class="container">
+			<button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link {{ _route == 'app_home' ? 'actif' : '' }}" aria-current="page" href="{{ path('app_home') }}">accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link {{ _route == 'app_blog' ? 'actif' : '' }}" href="{{ path('app_blog') }}">blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link {{ _route == 'app_about' ? 'actif' : '' }}" href="{{ path('app_about') }}">a propos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link {{ _route == 'app_contact' ? 'actif' : '' }}" href="{{ path('app_contact') }}">contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link {{ _route == 'app_create' ? 'actif' : '' }}" href="{{ path('app_create') }}">créer article</a>
+					</li>
+				</ul>
+
+				<div class="ms-lg-auto mb-lg-0 mb-3 d-flex align-items-center">
+					{# <i class="fa-solid fa-user i_connect"></i> #}
+					<!-- Button trigger LOGIN modal -->
+						<a type="button" class="btn border-0 rounded-0 user_connect" data-bs-toggle="modal" data-bs-target="#login_modal"> <i class="fa-solid fa-user me-2"></i>
+						Se connecter
+					</a>
+					{# ***********LOGIN MODAL************#}
+					<!-- LOGIN Modal -->
+					<div class="modal fade" id="login_modal" tabindex="-1" aria-labelledby="login_modalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header bg-success text-white">
+									<h5 class="modal-title text-center text-white" id="login_modalLabel">ME CONNECTER</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div
+									class="modal-body pt-5">
+									{# form #}
+									<form>
+										<div class="mb-3">
+											<label for="exampleInputEmail2" class="form-label">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail2">
+										</div>
+										<div class="mb-3">
+											<label for="exampleInputPassword2" class="form-label">Password</label>
+											<input type="password" class="form-control" id="exampleInputPassword2">
+										</div>
+										<div class="mb-5 form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck2">
+											<label class="form-check-label" for="exampleCheck2">Check me out</label>
+										</div>
+										<div class="mb-5 w-100">
+											<button type="submit" class="btn btn-success rounded-0 py-2 w-100 float-end">ME CONNECTER</button>
+										</div>
+
+									</form>
+									{# '''' #}
+
+									<!-- Button trigger REGISTER modal -->
+									<div class="mb-3 pt-5 w-100 d-flex align-items-center">Nouveau?
+										<a type="button" class="btn border-0 text-primary a_modal" data-bs-toggle="modal" data-bs-target="#register_modal">
+											<u>Créer un compte</u>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{# *********REGISETER MODAL********** #}
+					<!-- REGISTER Modal -->
+					<div class="modal fade" id="register_modal" tabindex="-1" aria-labelledby="registerModalLabe2" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header bg-primary text-white">
+									<h5 class="modal-title text-white" id="registerModalLabel2">CREER UN COMPTE</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div
+									class="modal-body pt-5">
+									{# form #}
+									<form>
+										<div class="mb-3">
+											<label for="exampleInputEmail1" class="form-label">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+											<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+										</div>
+										<div class="mb-3">
+											<label for="exampleInputPassword1" class="form-label">Password</label>
+											<input type="password" class="form-control" id="exampleInputPassword1">
+										</div>
+										<div class="mb-3">
+											<label for="exampleInputPassword3" class="form-label">Repeat password</label>
+											<input type="password" class="form-control" id="exampleInputPassword3">
+										</div>
+										<div class="mb-5 form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+											<label class="form-check-label" for="exampleCheck1">Check me out</label>
+										</div>
+										<div class="mb-5 w-100">
+											<button type="submit" class="btn btn-primary rounded-0 py-2 float-end w-100">CREER UN COMPTE</button>
+										</div>
+										<!-- Button trigger LOGIN modal -->
+										<div class="mb-3 pt-5 w-100 d-flex align-items-center">Déjà inscrit?
+											<a type="button" class="btn border-0 text-primary a_modal" data-bs-toggle="modal" data-bs-target="#login_modal">
+												<u>Me connecter</u>
+											</a>
+										</div>
+									</form>
+									{# '''' #}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

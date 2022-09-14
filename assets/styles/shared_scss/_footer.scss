@@ -1,0 +1,33 @@
+.my_foot{background-color: $foot;}
+
+.foot_title{color: $orange !important;}
+
+.foot_links:hover{color: $orange !important;}
+
+.a_foot_i{color: #fff;}
+
+.a_foot_i:hover {color: $orange !important;}
+
+.btn-grey-foot{
+    background-color: $orange;
+    color: $foot;
+    border: 1px solid $orange;
+}
+
+.btn-grey-foot:hover{
+    color: #fff;
+    background-color: $orange-hover;
+    border: 1px solid $orange-hover;
+}
+
+.footer-brand{
+    font-family: $brand-font;
+    font-size: 30px;
+    color: $orange;
+}
+
+.footer-brand:hover{color: $orange;}
+
+.w-90{width: 90%;}
+
+.w-10{width: 10%}

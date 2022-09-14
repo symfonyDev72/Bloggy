@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+{% block banner %}
+	{% include "layouts/partials/_banner.html.twig" %}
+{% endblock %}
+
+{% block body %}
+
+	<div class="row">
+		{% for id in 8..1 %}
+			<div class="col-12 mb-5">
+				<div class="card shadow border-0">
+					<img src="{{ asset("build/img/blog/blog#{id}.png") }}" class="card-img-top rounded-0" alt="...">
+					<div class="card-body rounded-bottom p-3 card_body">
+						<article>
+							<div class="d-flex justify-content-between">
+								<p class="text-dark fs-6">
+									<i class="fas fa-user-edit text-orange me-2"></i>Spartam72
+								</p>
+								<p class="lead fs-6 text-dark">
+									<i class="fa-solid fa-calendar-days text-orange me-2"></i>25/11/2022
+								</p>
+							</div>
+
+							<h3 class="card-title">Article n°
+								{{id}}
+							</h3>
+							<p class="card-text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely Omnis similique...
+							</p>
+						</article>
+						<div class="text-end mt-3">
+							<a href="{{ path('app_show',{'id':id} ) }}" class="btn btn-grey rounded-0">Lire en détail</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		{% endfor %}
+
+		{# <div class="mt-3 d-flex justify-content-center">{{ knp_pagination_render(articles,'layopagination.html.twig') }}</div> #}
+
+		{% include "layouts/partials/_pagination.html.twig" %}
+
+	</div>
+
+{% endblock %}

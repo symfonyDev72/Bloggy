@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+
+{% block show_article %}
+	<div class="container mb-3">
+		<div class="row">
+			<div class="col-12">
+				<div class="py-3 card_body rounded-top">
+					<h1 class="text-center w-100">Article n°
+						{{ id }}
+					</h1>
+
+					<div class="mx-auto div_cut"></div>
+
+					<div class="d-flex justify-content-center">
+						<p class="text-dark me-3">
+							<i class="fas fa-user-edit text-orange me-2"></i>Spartam72</p>
+						<p class="text-dark ms-3">
+							<i class="fa-solid fa-calendar-days text-orange ms-2"></i>17/08/2022</p>
+					</div>
+				</div>
+
+				<img src="{{ asset("build/img/blog/blog#{id}.png") }}" class="img-fluid w-100" alt="...">
+			</div>
+
+			<div class="col-12">
+				<div class="card border-0 rounded-0">
+					<div class="card-body">
+						<p class="card-text mt-3 show_content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo totam necessitatibus atque accusantium quo quasi eos voluptatem quos autem! At pariatur atque nisi rerum voluptatum ut soluta ipsum fuga quidem.Omnis doloremque vero nisi nulla, dicta assumenda unde blanditiis voluptates ratione expedita suscipit reprehenderit saepe possimus facere explicabo? Sequi dolorum veniam libero cumque cupiditate fuga voluptates sint id et mollitia?Cum, vel. Iste quaerat ipsum similique maxime a veniam vel. Natus voluptate omnis tempore voluptatem illum molestias ipsum, expedita officiis cupiditate laborum sint suscipit in delectus sed nulla error! Illo!Provident esse alias, eum vel dolore neque error aperiam similique? Voluptatem dolore magni laboriosam suscipit nobis quisquam iusto ex, tempora quaerat corrupti facilis itaque at a magnam soluta minima distinctio.Fugit, sapiente. Debitis facilis autem delectus iste, amet omnis quos porro libero quis quas, voluptatem maiores ex adipisci eaque quo illum commodi, nam doloribus obcaecati. Aspernatur autem provident delectus modi!
+						</p>
+
+						<div class="d-flex mt-5 pb-lg-3">
+							<a class="btn btn-outline-primary rounded-0" href="{{ path('app_edit',{'id': id} ) }}">
+								<i class="fas fa-edit"></i>&nbsp;Editer l'article
+							</a>
+
+							<div class="mx-4"></div>
+							<a class="btn btn-outline-danger rounded-0" href="#">
+								<i class="fas fa-trash-alt"></i>&nbsp;Supprimer l'article
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+{% endblock %}
+
+{% block body %}
+
+	{# comment form #}
+	{% include "layouts/partials/_comment_form.html.twig" %}
+	{# fin comment form #}
+
+	<hr
+	class="w-50 mx-auto my-5">
+	{# comments #}
+
+	<div class="row pb-lg-3">
+		<div class="col-lg-12">
+
+			<h2 class="mb-5 fw-bolder position-relative title_after">4 commentaires</h2>
+
+			<ul>
+				{% for i in 1..4 %}
+					<li class="d-flex mb-5 align-items-center">
+						<div class="{{ i is even ? "ps-md-5" : "ps-0" }}">
+							<img src="{{ asset("build/img/comments/comment-author-0#{i}.jpg") }}" width="90">
+						</div>
+						<div class="px-4">
+							<ul class="d-flex list-unstyled">
+								<li>
+									<h5 class="mb-2 fw-bolder w-100">Charles Kate</h5>
+								</li>
+								<li>
+									<span class="ms-4 text-orange fw-bold p_date">May 16, 2020</span>
+								</li>
+							</ul>
+							<p class="fs-6">Fusce ornare mollus eros. Duis et diam vitae justo fringilla condimentum eu quis leo.Vestibulum id turpis porttitor sapien facilisis scelerisque. Curabitur a nisl eu lacus convallis eleifend posuere id tellus.</p>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+
+			{% include "layouts/partials/_pagination.html.twig" %}
+
+		</div>
+
+	</div>
+
+	{# fin comments #}
+{% endblock %}

@@ -1,0 +1,36 @@
+<div class="row mb-5">
+
+	<div class="col-12">
+
+		<h2 class="mb-5 fw-bolder position-relative title_after">{{ _route == "app_show" ? "Laisser un commentaire" : "Rédiger votre message"}}</h2>
+
+		<form class="row">
+			<div class="col-sm-6 mb-sm-0 mb-4">
+				<div class="form-group">
+					<input type="text" class="form-control contact_input" required placeholder="Nom">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<input type="text" class="form-control contact_input" required placeholder="Adresse Email">
+				</div>
+			</div>
+			<div class="col-12 my-4">
+				<div class="form-group">
+					<input type="text" class="form-control contact_input" required placeholder="Sujet">
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="form-group">
+					<textarea rows="10" class="form-control no-resize" required placeholder="Votre message..."></textarea>
+				</div>
+
+				{# <p class="text-muted fst-italic my-2">(Votre adresse email ne sera pas publiée)</p> #}
+				<div class="form-text fst-italic">*Votre adresse email restera confidentielle</div>
+
+				<button type="submit" class="btn rounded-0 btn-grey px-3 py-2 mt-3">POSTER</button>
+			</div>
+		</form>
+
+	</div>
+</div>

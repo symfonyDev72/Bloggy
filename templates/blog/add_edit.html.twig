@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+{% block banner %}
+	{% include "layouts/partials/_banner.html.twig" %}
+{% endblock %}
+
+{% block body %}
+
+<div>
+	<h2 class="mb-5 position-relative title_after">{{ _route == 'app_edit' ? 'Editer un article' : 'Créer un article'  }}</h2>
+	<form>
+		<div class="mb-3">
+			<label for="title" class="form-label">Titre</label>
+			<input type="text" class="form-control" id="title" placeholder="Titre de l'article">
+		</div>
+		<div class="mb-3">
+			<label for="message" class="form-label">Contenu</label>
+			<textarea name="" id="message" rows="15" placeholder="Contenu de l'article" class="form-control"></textarea>
+		</div>
+		<div class="mb-4">
+			<label for="image" class="form-label">Image</label>
+			<input type="text" class="form-control" id="image" placeholder="Image de l'article">
+			<div id="imageHelp" class="form-text fst-italic">*une image par défaut sera attribuée à votre article si vous n'en fournissez aucune</div>
+		</div>
+
+		{% if _route == 'app_edit' %}
+			<div class="mb-5">
+				<figure class="w-25"><img src="{{ asset("build/img/blog/blog#{id}.png") }}" class="img-fluid"></figure>
+			</div>
+		{% endif %}{# ---------------------------------------------------------------------------------------------------------------------- #}{# ---- #}<button class="btn rounded-0 btn-grey px-3 py-2">{{ _route == 'app_edit' ? 'Enregistrer les modifications' : 'Ajouter l\'article' }}</button>
+
+</div>
+{# ------ #}{% endblock %}

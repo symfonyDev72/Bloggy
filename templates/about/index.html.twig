@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+{% block banner %}
+	{% include "layouts/partials/_banner.html.twig" %}
+{% endblock %}
+
+{% block body %}
+
+	{# section1 #}
+	<div class="row">
+
+		<div class="col-lg-8">
+			<h2 class="mb-5 position-relative title_after">A mon sujet</h2>
+			<p class="p-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sunt nam error amet laboriosam, nemo hic voluptate consequuntur, deleniti, fugiat cupiditate ullam accusantium reprehenderit libero voluptatibus aperiam cum officia? Magni.</p>
+			<p class="p-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sunt nam error amet laboriosam, nemo hic voluptate consequuntur, deleniti, fugiat cupiditate ullam accusantium reprehenderit libero voluptatibus aperiam cum officia? Magni.<br>Velit sapiente omnis earum, facilis harum est debitis tenetur deserunt tempora explicabo!Lorem, ipsum dolor sit amet consectetur adipisicing elit,sint occaecat cupidatat non proident, sunt in culpa.
+			</p>
+		</div>
+
+		<div class="col-lg-4 text-center mb-lg-0 mb-5 mt-lg-0 mt-3">
+
+			<figure>
+				<img src="{{ asset('build/img/about/aboutme.jpg') }}" class="img-fluid w-100 img-auth">
+				<figcaption class="figure-caption">
+					<ul class="list-unstyled d-flex justify-content-end mt-4 pe-4">
+						<li>
+							<a class="text-decoration-none text-dark mx-2 fs-5 social_about" href="">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+						</li>
+						<li>
+							<a class="text-decoration-none text-dark mx-2 fs-5 social_about" href="">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a class="text-decoration-none text-dark mx-2 fs-5 social_about" href="">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li>
+							<a class="text-decoration-none text-dark fs-5 social_about" href="">
+								<i class="fab fa-linkedin-in"></i>
+							</a>
+						</li>
+					</ul>
+				</figcaption>
+			</figure>
+
+		</div>
+
+	</div>
+	{# section1 #}
+
+
+	{# section2 #}
+	<div class="row ">
+		<div class="col-12">
+			<h2 class="mb-5 position-relative title_after">Le point de départ de mon blog</h2>
+			<p class="p-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus debitis eaque porro officiis maxime at fuga repellat itaque consequatur accusantium! Explicabo dolores natus expedita magnam necessitatibus inventore tempore voluptatem nemo.</p>
+			<p class="mt-3 p-color">
+				Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			</p>
+
+			<ul class="list-unstyled d-flex mt-4">
+				<li>
+					<div class="ps-5">
+						<blockquote class="fst-italic text-muted border-orange ps-3 fs-5">
+							Possimus animi modi praesentium quis delectus libero architecto ipsum sint iure amet rerum incidunt, harum facere voluptatibus eligendi. Velit sapiente omnis earum, facilis harum est debitis tenetur deserunt tempora explicabo!Lorem, ipsum dolor sit amet consectetur adipisicing elit,sint occaecat cupidatat non proident, sunt in culpa.
+						</blockquote>
+					</div>
+				</li>
+			</ul>
+			<p class="p-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus debitis eaque porro officiis maxime at fuga repellat itaque consequatur accusantium! Explicabo dolores natus expedita magnam necessitatibus inventore tempore voluptatem nemo.</p>
+		</div>
+
+	</div>
+	{# fin section 2 #}
+
+	{# section 3 #}
+
+	<div
+		class="row mt-5 pb-lg-5">
+		{# ------ #}
+		<div class="col-12">
+			<h2 class="mb-5 position-relative title_after">Mes collaborateurs</h2>
+			<p class="mb-5 p-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus debitis eaque porro officiis maxime at fuga repellat itaque consequatur accusantium! Explicabo dolores natus expedita magnam necessitatibus inventore tempore voluptatem nemo.</p>
+		</div>
+		{% for i in 1..4 %}
+
+			<div class="col-lg-3 col-md-6 my-3">
+
+				<div class="profile" style='background-image:url("{{asset("build/img/about/team-#{i}.jpg")}}")'>
+					<div class="overlay">
+						<div class="about d-flex flex-column">
+							<h3>Coéquipier&nbsp;{{ i }}</h3>
+							<span class="fs-5">Software Developer</span>
+						</div>
+						<ul class="social-icons">
+							<li>
+								<i class="fab fa-facebook-f"></i>
+							</li>
+							<li>
+								<i class="fa-brands fa-linkedin-in"></i>
+							</li>
+							<li>
+								<i class="fa-brands fa-twitter"></i>
+							</li>
+							<li>
+								<i class="fa-brands fa-instagram"></i>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		{% endfor %}
+	</div>
+
+	{# fin section 3 #}
+
+{% endblock %}
