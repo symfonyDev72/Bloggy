@@ -5,7 +5,7 @@ namespace App\Service;
 class BannerBackground
 {
 
-    public function changeBackground($route)
+    public function changeBackground($route): string
     {
         switch ($route) {
 
