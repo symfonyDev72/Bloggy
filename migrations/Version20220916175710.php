@@ -14,7 +14,7 @@ final class Version20220916175710 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return '';
+        return 'Create Post and User tables and add Timestampable Trait for createdAt and updatedAt fields';
     }
 
     public function up(Schema $schema): void
