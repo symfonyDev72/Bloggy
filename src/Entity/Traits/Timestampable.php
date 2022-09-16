@@ -7,7 +7,6 @@ use Doctrine\ORM\Mapping as ORM;
 trait Timestampable
 {
 
-
     #[ORM\Column(type: 'datetime_immutable', options: ['default' => 'CURRENT_TIMESTAMP'])]
     private $createdAt;
 
